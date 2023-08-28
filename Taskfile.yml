@@ -1,0 +1,33 @@
+version: 3
+
+dotenv:
+  - .env
+
+tasks:
+  run:
+    dir: ./test-ai
+    cmds:
+      - python3 agent.py
+
+  deep-learning-example:run:
+    dir: ./test-ai
+    cmds:
+      - python3 deep-learning-example.py
+
+  mongo-agent:run:
+    interactive: true
+    dir: ./mongodb
+    cmds:
+      - python3 mongo-agent.py
+
+  rss-agent:run:
+    interactive: true
+    dir: ./test-ai
+    cmds:
+      - python3 hacker-news-agent.py
+
+  test:run:
+    interactive: true
+    dir: ./test-ai
+    cmds:
+      - python3 retrieval.py

@@ -2,6 +2,8 @@
 
 [community deeplearning](https://community.deeplearning.ai/)
 
+[deeplearning ai](https://www.deeplearning.ai/short-courses/)
+
 # LLM
     In the context of AI, "LLM" likely refers to "Large Language Model." A Large Language Model is a type of artificial intelligence model designed to understand and generate human-like text based on vast amounts of training data. These models are capable of performing tasks such as language translation, text generation, question answering, and more.
 

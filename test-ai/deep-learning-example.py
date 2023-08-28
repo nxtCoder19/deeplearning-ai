@@ -15,22 +15,38 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
     )
     return response.choices[0].message["content"]
 
-text = f"""
-You should express what you want a model to do by \ 
-providing instructions that are as clear and \ 
-specific as you can possibly make them. \ 
-This will guide the model towards the desired output, \ 
-and reduce the chances of receiving irrelevant \ 
-or incorrect responses. Don't confuse writing a \ 
-clear prompt with writing a short prompt. \ 
-In many cases, longer prompts provide more clarity \ 
-and context for the model, which can lead to \ 
-more detailed and relevant outputs.
-"""
 prompt = f"""
-Summarize the text delimited by triple backticks \ 
-into a single sentence.
-```{text}```
+Generate a list of three made-up book titles along \ 
+with their authors and genres. 
+Provide them in JSON format with the following keys: 
+book_id, title, author, genre.
 """
-response = get_completion(prompt)
+# response = get_completion(prompt)
+# print(response)
+
+entry = "Food is bad but service was good"
+
+prompt1 = f"""
+please provide your review in form of rating for below statement:
+statement: {entry}
+The rating will varry from 1 to 5.
+1 means : bad
+2 means: good
+3 means average
+4 means very good
+5 means best
+
+Also, specify on what basis you have provided that rating?
+"""
+
+# response = get_completion(prompt1)
+# print(response)
+
+source = "hackernews"
+sourcePrompt = f"""
+provide rss feed url for {source}
+Please remember, i need only url nothintg apart from that
+if you are not able to provide url just return empty json
+"""
+response = get_completion(sourcePrompt)
 print(response)
